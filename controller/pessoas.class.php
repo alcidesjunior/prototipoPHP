@@ -7,10 +7,12 @@ class Pessoas{
 		$this->pessoa = new Pessoa();
 	}
 
-	public function index(){}
+	public function getAll(){
+		return $this->pessoa->getAll();
+	}
 	public function show(){}
-	public function create($id,$nome,$sobrenome,$idade,$nasc){
-		$dt = $this->pessoa->insert($id,$nome,$sobrenome,$idade,$nasc);
+	public function create($nome,$sobrenome,$idade,$nasc){
+		$dt = $this->pessoa->insert($nome,$sobrenome,$idade,$nasc);
 		return ($dt ? true : false);
 	}
 	public function update(){}
